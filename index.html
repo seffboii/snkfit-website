@@ -16,6 +16,7 @@
   <meta property="og:image" content="https://snkfit.com/og-image.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="SNKFIT — Build Outfits Around Your Sneakers"/>
   <meta property="og:site_name" content="SNKFIT"/>
 
   <!-- Twitter Card -->
@@ -25,7 +26,7 @@
   <meta name="twitter:image" content="https://snkfit.com/og-image.png"/>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -575,19 +576,45 @@
       .hamburger { display: flex; }
     }
     @media (max-width: 768px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-phone-wrap { display: none; }
-      .hiw-grid { grid-template-columns: 1fr; }
-      .hiw-visual { display: none; }
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
+      .hero-phone-wrap { display: flex; }
+      .hero-phone { width: 200px; height: 406px; }
+      .hero-phone::before { width: 82px; height: 22px; }
+      .hiw-grid { grid-template-columns: 1fr; gap: 0; }
+      .hiw-visual { display: flex; min-height: 0; justify-content: center; overflow: hidden; }
+      .hiw-hex-wrap { transform: scale(0.72); transform-origin: top center; margin-bottom: -118px; }
       .hiw-accent { display: none; }
       .bento { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .bc-scr { grid-column: 1/3; grid-row: auto; min-height: 220px; }
+      .bc-scr { grid-column: 1/3; grid-row: auto; min-height: auto; }
+      .bc-scr-inner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 28px 24px 24px;
+        gap: 24px;
+      }
+      .bc-scr-text {
+        position: static;
+        width: 100%;
+        z-index: 3;
+      }
+      .bc-phone-in-card {
+        width: 100px;
+        height: 216px;
+        flex-shrink: 0;
+      }
       .bc-a,.bc-b,.bc-c,.bc-d { grid-column: auto; grid-row: auto; }
       .bc-e,.bc-f { grid-column: 1/3; grid-row: auto; }
       .dl-grid { grid-template-columns: 1fr; }
       .email-grid { grid-template-columns: 1fr; }
       .dl-visual { display: none; }
       .footer-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+      #how-it-works { padding: 64px 0; }
+      #features { padding: 64px 0; }
+      #stay-in-loop { padding: 56px 0; }
+      #download-cta { padding: 64px 0; }
+      .hero-inner { padding-top: 48px; padding-bottom: 48px; }
     }
     @media (max-width: 480px) {
       .bento { grid-template-columns: 1fr; }
@@ -705,7 +732,7 @@
               <div class="step-desc">Style your sneakers with your clothes and save every look you build.</div>
             </div>
           </div>
-          <div class="step-item">
+          <div class="hiw-step">
             <div class="step-num">04</div>
             <div>
               <div class="step-label">Wear Your Shoes</div>
@@ -913,15 +940,4 @@
     function onScroll() {
       if (window.scrollY > 10) {
         h.style.background = '#ffffff';
-        h.style.boxShadow = '0 1px 0 rgba(0,0,0,0.08)';
-      } else {
-        h.style.background = 'transparent';
-        h.style.boxShadow = 'none';
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  })();
-</script>
-</body>
-</html>
+        h.style.boxShadow = '0 1px 0 rgba
