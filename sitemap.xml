@@ -6,12 +6,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://snkfit.com/privacy-policy.html</loc>
+    <loc>https://snkfit.com/privacy-policy</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://snkfit.com/terms-of-use.html</loc>
+    <loc>https://snkfit.com/terms-of-use</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
